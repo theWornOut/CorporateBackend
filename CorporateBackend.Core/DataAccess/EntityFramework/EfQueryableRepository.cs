@@ -6,7 +6,7 @@ namespace CorporateBackend.Core.DataAccess.EntityFramework
 {
     public class EfQueryableRepository<T> : IQueryableRepository<T> where T : class, IEntity, new()
     {
-        private DbContext _context;
+        private readonly DbContext _context;
         private IDbSet<T> _entities;
         public EfQueryableRepository(DbContext context)
         {

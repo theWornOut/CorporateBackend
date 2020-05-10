@@ -82,11 +82,8 @@ namespace CorporateBackend.Core.DataAccess.EntityFramework
 
         public void Delete(object id)
         {
-            using (var context = new TContext())
-            {
-                var entity = GetById(id);
-                if (entity != null) Delete(entity);
-            }
+            var entity = GetById(id);
+            if (entity != null) Delete(entity);
         }
     }
 }
