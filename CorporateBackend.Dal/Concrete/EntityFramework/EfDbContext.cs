@@ -4,11 +4,11 @@ using CorporateBackend.Entity.Concrete;
 
 namespace CorporateBackend.Dal.Concrete.EntityFramework
 {
-    public class EfDbContext : DbContext
+    public class NorthwindContext : DbContext
     {
-        public EfDbContext()
+        public NorthwindContext()
         {
-            Database.SetInitializer<EfDbContext>(null);
+            Database.SetInitializer<NorthwindContext>(null);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
